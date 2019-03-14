@@ -41,12 +41,12 @@ namespace Bank
             get { return m_balance; }
         }
 
+        public static string DebitAmountLessThanZeroMessage { get; set; }
+        public static string DebitAmountExceedsBalanceMessage { get; set; }
+
         public void Debit(double amo5unt)
         {
-            if (m_frozen)
-            {
-                throw new Exception("Account frozen");
-            }
+            
 
             if (amount > m_balance)
             {
